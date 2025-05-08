@@ -1,0 +1,28 @@
+FIT Profiler Report
+Profile stats for: records rank: 0
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg     Self CUDA   Self CUDA %    CUDA total  CUDA time avg    # of Calls  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+                                          ProfilerStep*        22.77%        1.592s        86.01%        6.014s        3.007s       0.000us         0.00%        1.069s     534.268ms             2  
+                                              aten::div         0.13%       9.341ms         0.17%      11.565ms      42.055us     617.000us         0.04%       2.465ms       8.964us           275  
+                                       cudaLaunchKernel         2.99%     209.131ms         2.99%     209.169ms      56.349us      69.161ms         3.98%      69.161ms      18.632us          3712  
+void at::native::vectorized_elementwise_kernel<4, at...         0.00%       0.000us         0.00%       0.000us       0.000us     279.000us         0.02%     279.000us       2.022us           138  
+                                           aten::detach         0.01%     408.000us         0.01%     935.000us       2.548us       0.000us         0.00%       0.000us       0.000us           367  
+                                                 detach         0.01%     567.000us         0.01%     567.000us       1.545us       0.000us         0.00%       0.000us       0.000us           367  
+                                            aten::clone         0.01%     820.000us         0.15%      10.259ms      53.432us       0.000us         0.00%       2.520ms      13.125us           192  
+                                    aten::empty_strided         0.64%      44.406ms         0.67%      47.036ms      36.377us       0.000us         0.00%       0.000us       0.000us          1293  
+                                            aten::copy_         0.61%      42.975ms         1.92%     134.256ms     110.227us      24.448ms         1.41%      89.051ms      73.112us          1218  
+                                        cudaMemcpyAsync         6.56%     458.549ms         9.10%     636.309ms     559.147us      64.646ms         3.72%      64.646ms      56.807us          1138  
+                         Memcpy DtoD (Device -> Device)         0.00%       0.000us         0.00%       0.000us       0.000us      20.128ms         1.16%      20.128ms      49.699us           405  
+[pl][profile][Callback]TQDMProgressBar.on_before_zer...         0.00%      40.000us         0.00%      40.000us      40.000us       0.000us         0.00%       0.000us       0.000us             1  
+[pl][profile][Callback]ModelSummary.on_before_zero_g...         0.00%      13.000us         0.00%      13.000us      13.000us       0.000us         0.00%       0.000us       0.000us             1  
+[pl][profile][Callback]ModelCheckpoint{'monitor': No...         0.00%       8.000us         0.00%       8.000us       8.000us       0.000us         0.00%       0.000us       0.000us             1  
+[pl][profile][LightningModule]pl_model.on_before_zer...         0.00%      12.000us         0.00%      12.000us      12.000us       0.000us         0.00%       0.000us       0.000us             1  
+[pl][profile][LightningModule]pl_model.optimizer_zer...         0.00%      28.000us         0.00%      53.000us      53.000us       0.000us         0.00%       0.000us       0.000us             1  
+                    Optimizer.zero_grad#AdamW.zero_grad         0.00%      25.000us         0.00%      25.000us      25.000us       0.000us         0.00%       0.000us       0.000us             1  
+            [pl][profile][Strategy]DDPStrategy.backward        13.86%     969.262ms        13.87%     969.489ms     969.489ms       0.000us         0.00%       2.000us       2.000us             1  
+[pl][profile][Callback]TQDMProgressBar.on_before_bac...         0.00%      14.000us         0.00%      14.000us      14.000us       0.000us         0.00%       0.000us       0.000us             1  
+[pl][profile][Callback]ModelSummary.on_before_backwa...         0.00%       7.000us         0.00%       7.000us       7.000us       0.000us         0.00%       0.000us       0.000us             1  
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  ------------  
+Self CPU time total: 6.992s
+Self CUDA time total: 1.737s

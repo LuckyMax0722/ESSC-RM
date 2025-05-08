@@ -1,0 +1,9 @@
+timm
+open3d-python
+easydict
+fvcore
+einops
+torchmetrics
+pytorch-lightning==2.3.3
+tensorboard==2.12.0
+six
